@@ -38,3 +38,8 @@ export const getTitle = () => {
 export const getObjKey = (obj, value) => {
     return Object.keys(obj).find(key => obj[key] === value);
 }
+
+export const findDifferenceInDays(endDate, startDate) => {
+    const diff = endDate.setHours(0,0,0,0) - startDate.setHours(0,0,0,0);
+    return diff/86400000;
+}
